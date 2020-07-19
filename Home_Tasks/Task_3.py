@@ -37,5 +37,3 @@ def my_func(my_list):
 print(f'Сумма наибольших двух чисел равна: {my_func(user_val)}')
 
 
-#user_val = [val for val in user_val if val != my_min(user_val)]
-
