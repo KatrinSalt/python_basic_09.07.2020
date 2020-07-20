@@ -11,3 +11,82 @@
 Выполнено Салтыковой Екатериной.
 19.07.20.
 """
+#  Решение 1: оператор **
+while True:
+    inp_1, inp_2 = input('Ввведите два числа через пробел: одно действительное положительное и '
+                         'одно целое отрицательное:\n').split()
+
+    # Проверям, ввел ли пользоваетель число
+    def is_number(a, b):
+        try:
+            float(a)
+            int(b)
+            return True
+        except ValueError:
+            return False
+
+
+    if is_number(inp_1, inp_2) is True:
+        inp_1 = float(inp_1)
+        inp_2 = int(inp_2)
+        break
+    else:
+        print('Ошибка ввода. Введенные вами значения не являются числами. Повторите ввод.')
+        continue
+
+
+def my_func(x, y):
+    """
+    Функция возвращает результат возведение числа x в степень y
+    :param x: float
+    :param y: int
+    :return: float
+    """
+    result = x ** y
+    return result
+
+
+print(f'Результат возведения в степень: {my_func(inp_1, inp_2)}')
+
+# Решение 2: цикл
+print('#' * 30)
+while True:
+    inp1, inp2 = input('Ввведите два числа через пробел: одно действительное положительное и '
+                       'одно целое отрицательное:\n').split()
+
+    # Проверям, ввел ли пользоваетель число
+    def is_number(a, b):
+        try:
+            float(a)
+            int(b)
+            return True
+        except ValueError:
+            return False
+
+
+    if is_number(inp1, inp2) is True:
+        inp1 = float(inp1)
+        inp2 = int(inp2)
+        break
+    else:
+        print('Ошибка ввода. Введенные вами значения не являются числами. Повторите ввод.')
+        continue
+
+
+def my_func_2(x, y):
+    """
+    Функция возвращает результат возведение числа x в степень y
+    :param x: float
+    :param y: int
+    :return: float
+    """
+    value = 1 / x
+    result = 1
+    while y:
+        result *= value
+        y += 1
+    return result
+
+
+print(f'Результат возведения в степень: {my_func_2(inp1, inp2)}')
+
