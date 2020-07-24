@@ -7,4 +7,10 @@
 Выполнено Салтыковой Екатериной.
 23.07.2020
 """
+import random
 
+my_list = [random.randint(0, 100) for el in range(15)]
+print(my_list)
+
+new_list = [my_list[ind] for ind in range(1, len(my_list)) if my_list[ind] > my_list[ind-1]]
+print(new_list)
