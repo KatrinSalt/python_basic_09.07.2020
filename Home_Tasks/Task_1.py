@@ -5,8 +5,15 @@
 Выполнено Салтыковой Екатериной.
 27.08.20
 """
-file_name = input('Введите имя файла:\n')
-with open(f'{file_name}.txt', 'w') as user_file:
+import os
+from pathlib import Path
+
+path = Path('task.1')
+#file_path = os.path.join(os.path.dirname(__file__), 'task1.txt')
+#file_name = input('Введите имя файла:\n')
+
+#with open(f'{file_name}.txt', 'w') as user_file:
+with open(path, 'w', encoding='UTF-8') as user_file:
     while True:
         user_input = input('Введите любой текст: \n')
         if len(user_input) == 0:
