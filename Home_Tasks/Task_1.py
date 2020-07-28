@@ -8,7 +8,9 @@
 import os
 from pathlib import Path
 
-path = Path('task.1')
+path = Path(os.path.dirname(__file__), 'task1.txt')
+print(__file__)
+print(path)
 #file_path = os.path.join(os.path.dirname(__file__), 'task1.txt')
 #file_name = input('Введите имя файла:\n')
 
@@ -19,6 +21,8 @@ with open(path, 'w', encoding='UTF-8') as user_file:
         if len(user_input) == 0:
             break
         user_file.write(f'{user_input}\n')
+
+
 
 # with open("user_text.txt", "r") as user_file:
 #     content = user_file.read()
