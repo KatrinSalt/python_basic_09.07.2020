@@ -4,7 +4,7 @@
 количества слов в каждой строке.
 
 Выполнено Салтыковой Екатериной.
-27.08.20
+28.07.20
 """
 
 with open(r"/Users/KatrinSalt/Documents/GeekBrains/python_basic_09.07.2020/Home_Tasks/text.txt", "r") as input_file:

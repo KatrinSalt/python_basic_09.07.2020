@@ -10,7 +10,7 @@ Four — 4
 Новый блок строк должен записываться в новый текстовый файл.
 
 Выполнено Салтыковой Екатериной.
-27.08.20
+28.07.20
 """
 import os
 from pathlib import Path
@@ -24,6 +24,7 @@ with open('task4.txt', 'r') as old_file:
         for line in old_file:
             content = line.split()
             content[0] = numbers[i]
+            print(type(content))
             with open(file_path, 'a', encoding='UTF-8') as new_file:
                 new_file.write(' '.join(content)+'\n')
             i += 1
