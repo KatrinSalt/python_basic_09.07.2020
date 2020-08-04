@@ -39,9 +39,10 @@ class Position(Worker):
         super().__init__(name, surname, position, wage, bonus)
 
 
-worker = Position('Илья', 'Абрамович', 'официант', 20000, 5000)
-worker.get_full_name()
-worker.get_total_income()
+if __name__ == '__main__':
+    worker = Position('Илья', 'Абрамович', 'официант', 20000, 5000)
+    worker.get_full_name()
+    worker.get_total_income()
 
 
 
