@@ -16,15 +16,15 @@ length (длина), width (ширина). Значения данных атр�
 
 class Road:
 
-    weight = 25
+    __weight = 25
 
     def __init__(self, width, length):
-        self.__width = width
-        self.__length = length
+        self.__width = int(width)
+        self.__length = int(length)
 
     def estimation(self):
         height = input("Введите значение толщины асфальта в см:\n")
-        calc = self.__width * self.__length * self.weight * int(height)
+        calc = self.__width * self.__length * self.__weight * int(height)
         return calc//1000
 
 
