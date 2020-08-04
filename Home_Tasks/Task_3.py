@@ -22,15 +22,14 @@ class Worker:
         self.__income = {'wage': wage, 'bonus': bonus}
 
     def get_full_name(self):
-        print(f'Полное имя сотрудника: {self.name} {self.surname}')
-        return self.name, self.surname
+        return f'Полное имя сотрудника: {self.name} {self.surname}'
 
     def get_total_income(self):
         income = 0
         for value in self.__income.values():
             income += value
-        print(f'Полная заработная плата сотрудника: {income}')
-        return income
+        # sum(self.__income.values())
+        return f'Полная заработная плата сотрудника: {income}'
 
 
 class Position(Worker):
@@ -41,8 +40,8 @@ class Position(Worker):
 
 if __name__ == '__main__':
     worker = Position('Илья', 'Абрамович', 'официант', 20000, 5000)
-    worker.get_full_name()
-    worker.get_total_income()
+    print(worker.get_full_name())
+    print(worker.get_total_income())
 
 
 
